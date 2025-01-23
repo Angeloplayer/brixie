@@ -31,6 +31,7 @@ html {
     margin-top: 20px;
     font-size: 36px;
     text-align: center;
+    animation: colorChange 5s infinite;
   }
 }
 
@@ -78,6 +79,7 @@ html {
   text-align: center;
   cursor: pointer;
   display: block; /* Rende visibile quando il video è fermo */
+  animation: colorChange 5s infinite;
 }
 
 @keyframes backgroundChange {
@@ -112,5 +114,35 @@ html {
 
 /* Applicazione dell'animazione */
 body {
-  animation: backgroundChange 5s infinite; /* 10s per completare il ciclo e infinito */
+  animation: backgroundChange 3s infinite; /* 10s per completare il ciclo e infinito */
+}
+
+@keyframes colorChange {
+  0% {
+    color: #6c00ff;
+  }
+  12.5% {
+    color: #8831ff;
+  }
+  25% {
+    color: #9e56ff;
+  }
+  37.5% {
+    color: #ae73ff;
+  }
+  50% {
+    color: #bd8cff;
+  }
+  62.5% {
+    color: #ae73ff;
+  }
+  75% {
+    color: #9e56ff;
+  }
+  87.5% {
+    color: #8831ff;
+  }
+  100% {
+    color: #6c00ff;
+  }
 }
