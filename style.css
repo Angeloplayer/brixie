@@ -39,6 +39,7 @@ html {
   font-size: 36px;
   text-align: center;
   animation: colorChange 5s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Video */
@@ -231,6 +232,7 @@ body {
     z-index: 2; /* Sopra lo sfondo */
     animation: fadeIn 1.5s ease-in; /* Effetto di apparizione graduale */
     animation: colorChange 5s infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   @keyframes fadeIn {
