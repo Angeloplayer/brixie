@@ -148,3 +148,95 @@ body {
     color: #6c00ff;
   }
 }
+
+/* Contenitore del pulsante */
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  animation: backgroundChange 3s infinite;
+}
+
+/* Stile del pulsante */
+#special-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #6c00ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  a {
+    text-decoration: none;
+  }
+}
+
+#special-button:hover {
+  background-color: #8831ff;
+}
+
+/* Sorpresa Css */
+
+/* Pulsante audio */
+.audio-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+#sorpresa {
+  /* Video a schermo intero */
+  .video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Adatta il video senza distorsioni */
+    opacity: 1; /* Inizialmente visibile */
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Impedisce che il video si sovrapponga al pulsante */
+  }
+
+  /* Contenitore delle foto */
+  .photo-container {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); /* 1-4 colonne a seconda della larghezza */
+    gap: 10px; /* Distanza tra le immagini */
+    padding: 10px;
+  }
+
+  /* Immagini */
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assicura che l'immagine si adatti senza deformarsi */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .photo:hover {
+    transform: scale(
+      1.1
+    ); /* Aggiunge un effetto di zoom quando si passa sopra l'immagine */
+  }
+}
