@@ -1,21 +1,22 @@
 const video = document.getElementById("fullscreen-video");
+const message = document.getElementById("message");
 const audioToggle = document.getElementById("audio-toggle");
 
-// Avvia l'audio e mostra il video quando la pagina si carica
+// Avvia l'audio quando la pagina si carica
 video
   .play()
   .then(() => {
-    // Video avviato e audio inizia a suonare
-    video.style.opacity = "1"; // Assicurati che il video sia visibile immediatamente
+    // Video avviato correttamente
   })
   .catch((error) => {
-    console.log("Errore durante l'avvio del video:", error);
+    console.error("Errore durante l'avvio del video:", error);
   });
 
-// Dopo 5 secondi, rendi il video invisibile mantenendo l'audio attivo
+// Dopo 5 secondi, il video scompare e appare la scritta
 setTimeout(() => {
   video.style.opacity = "0"; // Nasconde il video
   video.style.pointerEvents = "none"; // Evita interazioni con il video
+  message.classList.remove("hidden"); // Mostra la scritta
 }, 5000);
 
 // Alterna l'audio con il pulsante

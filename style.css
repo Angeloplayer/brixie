@@ -202,6 +202,7 @@ body {
 
 #sorpresa {
   /* Video a schermo intero */
+
   .video {
     width: 100%;
     height: 100vh;
@@ -214,8 +215,37 @@ body {
     z-index: 0; /* Impedisce che il video si sovrapponga al pulsante */
   }
 
+  /* Scritta nascosta di default */
+  .hidden {
+    display: none;
+  }
+
+  /* Stile della scritta */
+  #message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em !important; /* Dimensione grande del testo */
+
+    text-align: center;
+    z-index: 2; /* Sopra lo sfondo */
+    animation: fadeIn 1.5s ease-in; /* Effetto di apparizione graduale */
+    animation: colorChange 5s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   /* Contenitore delle foto */
   .photo-container {
+    animation: backgroundChange 3s infinite;
     display: grid;
     grid-template-columns: repeat(
       auto-fill,
